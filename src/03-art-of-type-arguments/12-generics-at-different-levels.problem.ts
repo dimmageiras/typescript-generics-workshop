@@ -1,5 +1,5 @@
-import { expect, it, describe } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
+import { Equal, Expect } from "@total-typescript/helpers";
+import { describe, expect, it } from "vitest";
 
 export const getHomePageFeatureFlags = (
   config: unknown,
@@ -38,7 +38,7 @@ describe("getHomePageFeatureFlags", () => {
     });
 
     type tests = [
-      Expect<Equal<typeof flags, { showBanner: boolean; showLogOut: boolean }>>
+      Expect<Equal<typeof flags, { showBanner: boolean; showLogOut: boolean }>>,
     ];
   });
 
@@ -54,7 +54,7 @@ describe("getHomePageFeatureFlags", () => {
     });
 
     type tests = [
-      Expect<Equal<typeof flags, { showBanner: boolean; showLogOut: boolean }>>
+      Expect<Equal<typeof flags, { showBanner: boolean; showLogOut: boolean }>>,
     ];
   });
 });

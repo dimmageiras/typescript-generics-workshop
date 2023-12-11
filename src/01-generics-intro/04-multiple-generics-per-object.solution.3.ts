@@ -1,5 +1,5 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 type Params<T1, T2> = {
   a: T1;

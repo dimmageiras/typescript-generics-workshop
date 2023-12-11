@@ -1,4 +1,4 @@
-import { Equal, Expect } from "../helpers/type-utils";
+import { Equal, Expect } from "@total-typescript/helpers";
 
 /**
  * This time, let's solve this with function overloads!

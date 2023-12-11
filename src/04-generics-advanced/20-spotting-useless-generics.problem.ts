@@ -1,5 +1,5 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 const returnBothOfWhatIPassIn = <T1, T2>(params: {
   a: T1;

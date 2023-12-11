@@ -1,4 +1,4 @@
-import { Equal, Expect } from "../helpers/type-utils";
+import { Equal, Expect } from "@total-typescript/helpers";
 
 export const inferItemLiteral = <T>(t: T) => {
   return {
@@ -11,7 +11,7 @@ const result2 = inferItemLiteral(123);
 
 type tests = [
   Expect<Equal<typeof result1, { output: "a" }>>,
-  Expect<Equal<typeof result2, { output: 123 }>>
+  Expect<Equal<typeof result2, { output: 123 }>>,
 ];
 
 // @ts-expect-error

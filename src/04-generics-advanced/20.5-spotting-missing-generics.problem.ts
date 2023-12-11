@@ -1,4 +1,4 @@
-import { Equal, Expect } from "../helpers/type-utils";
+import { Equal, Expect } from "@total-typescript/helpers";
 
 const getValue = <TObj>(obj: TObj, key: keyof TObj) => {
   return obj[key];

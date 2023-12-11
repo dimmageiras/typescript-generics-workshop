@@ -1,5 +1,5 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 export const curryFunction =
   <T, U, V>(t: T) =>

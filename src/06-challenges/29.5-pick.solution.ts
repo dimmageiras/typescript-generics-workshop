@@ -1,14 +1,17 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 const pick = <TObj, TPicked extends keyof TObj>(
   obj: TObj,
   picked: Array<TPicked>
 ) => {
-  return picked.reduce((acc, key) => {
-    acc[key] = obj[key];
-    return acc;
-  }, {} as Pick<TObj, TPicked>);
+  return picked.reduce(
+    (acc, key) => {
+      acc[key] = obj[key];
+      return acc;
+    },
+    {} as Pick<TObj, TPicked>
+  );
 };
 
 it("Should pick the keys from the object", () => {

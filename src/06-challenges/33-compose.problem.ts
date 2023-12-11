@@ -1,5 +1,5 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 export const compose =
   (...funcs: Array<(input: any) => any>) =>
@@ -27,6 +27,6 @@ it("Should error when the input to a function is not typed correctly", () => {
     // a function that returns a string!
     // @ts-expect-error
     String,
-    addOne,
+    addOne
   );
 });

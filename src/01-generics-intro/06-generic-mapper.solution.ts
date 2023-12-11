@@ -1,10 +1,10 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 export const concatenateFirstNameAndLastName = <
   T extends { firstName: string; lastName: string },
 >(
-  user: T,
+  user: T
 ) => {
   return {
     ...user,
@@ -83,6 +83,6 @@ it("Should fail when the object passed in does not contain firstName", () => {
 
   const newUsers = users.map(
     // @ts-expect-error
-    concatenateFirstNameAndLastName,
+    concatenateFirstNameAndLastName
   );
 });

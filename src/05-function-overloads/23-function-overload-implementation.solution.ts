@@ -1,5 +1,5 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 interface AnonymousPrivileges {
   sitesCanVisit: string[];
@@ -17,7 +17,7 @@ function getRolePrivileges(role: "admin"): AdminPrivileges;
 function getRolePrivileges(role: "user"): UserPrivileges;
 function getRolePrivileges(role: string): AnonymousPrivileges;
 function getRolePrivileges(
-  role: string,
+  role: string
 ): AnonymousPrivileges | AdminPrivileges | UserPrivileges {
   switch (role) {
     case "admin":

@@ -1,4 +1,4 @@
-import { Equal, Expect } from "../helpers/type-utils";
+import { Equal, Expect } from "@total-typescript/helpers";
 
 const obj = {
   a: 1,
@@ -21,5 +21,5 @@ type tests = [
   Expect<Equal<typeof one, 1>>,
   Expect<Equal<typeof oneByDefault, 1>>,
   Expect<Equal<typeof two, 2>>,
-  Expect<Equal<typeof three, 3>>
+  Expect<Equal<typeof three, 3>>,
 ];

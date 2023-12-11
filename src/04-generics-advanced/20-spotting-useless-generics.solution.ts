@@ -1,5 +1,5 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 const returnBothOfWhatIPassIn = <
   TParams extends {
@@ -7,7 +7,7 @@ const returnBothOfWhatIPassIn = <
     b: unknown;
   },
 >(
-  params: TParams,
+  params: TParams
 ): [TParams["a"], TParams["b"]] => {
   return [params.a, params.b];
 };

@@ -1,4 +1,4 @@
-import { Equal, Expect } from "../helpers/type-utils";
+import { Equal, Expect } from "@total-typescript/helpers";
 
 const obj = {
   a: 1,
@@ -8,8 +8,8 @@ const obj = {
 
 type ObjKey = keyof typeof obj;
 
-function getObjValue(): typeof obj["a"];
-function getObjValue<TKey extends ObjKey>(key: TKey): typeof obj[TKey];
+function getObjValue(): (typeof obj)["a"];
+function getObjValue<TKey extends ObjKey>(key: TKey): (typeof obj)[TKey];
 function getObjValue(key: ObjKey = "a") {
   return obj[key];
 }
@@ -23,5 +23,5 @@ type tests = [
   Expect<Equal<typeof one, 1>>,
   Expect<Equal<typeof oneByDefault, 1>>,
   Expect<Equal<typeof two, 2>>,
-  Expect<Equal<typeof three, 3>>
+  Expect<Equal<typeof three, 3>>,
 ];

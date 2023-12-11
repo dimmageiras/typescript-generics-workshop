@@ -1,5 +1,5 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 // You'll need to use function overloads to figure this out!
 function useData<T>(params: { fetchData: () => Promise<T>; initialData?: T }): {

@@ -1,10 +1,10 @@
-import { Equal, Expect } from "../helpers/type-utils";
+import { Equal, Expect } from "@total-typescript/helpers";
 
 export const makeSelectors = <
   TSource,
   TSelectors extends Record<string, (source: TSource) => any>,
 >(
-  selectors: TSelectors,
+  selectors: TSelectors
 ) => {
   return selectors;
 };

@@ -1,5 +1,5 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 type MakeInfiniteScrollParams<TRow> = {
   key: keyof TRow;
@@ -72,6 +72,6 @@ it("Should allow you to pass initialRows", () => {
   ]);
 
   type tests = [
-    Expect<Equal<typeof rows, Array<{ id: number; name: string }>>>
+    Expect<Equal<typeof rows, Array<{ id: number; name: string }>>>,
   ];
 });

@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
+import { Equal, Expect } from "@total-typescript/helpers";
+import { expect, it } from "vitest";
 
 function youSayGoodbyeISayHello(greeting: "goodbye"): "hello";
 function youSayGoodbyeISayHello(greeting: "hello"): "goodbye";

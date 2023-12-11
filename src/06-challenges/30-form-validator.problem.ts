@@ -1,5 +1,5 @@
+import { Equal, Expect } from "@total-typescript/helpers";
 import { expect, it } from "vitest";
-import { Equal, Expect } from "../helpers/type-utils";
 
 const makeFormValidatorFactory = (validators: unknown) => (config: unknown) => {
   return (values: unknown) => {
